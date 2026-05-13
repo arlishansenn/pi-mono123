@@ -1,4 +1,4 @@
-# 员工教程：用 Pi 写第一个 PRD、提交到 GitHub，并完成第二节课
+# 第一课：安装 Pi、设置模型、写第一个 PRD
 
 > 适用对象：第一次使用 Pi 的产品经理、项目经理、运营同事或研发协作人员。
 >
@@ -271,58 +271,7 @@ Pi 会自己判断需要执行哪些 git 操作。
 
 ---
 
-## 7. 第二节课：安装 RPIV
-
-第二节课需要学会安装并初始化 RPIV。
-
-### 7.1 安装 RPIV
-
-在终端执行：
-
-```bash
-pi install npm:@juicesharp/rpiv-pi
-```
-
-### 7.2 运行 `/rpiv-setup`
-
-启动 Pi：
-
-```bash
-pi
-```
-
-然后在 Pi 里输入：
-
-```text
-/rpiv-setup
-```
-
-它会读取：
-
-```text
-~/.pi/agent/settings.json
-```
-
-然后预览：
-
-1. 缺失的 sibling 配置；
-2. 可以清理的 legacy entries。
-
-看完预览后，确认一次即可应用修改。
-
-### 7.3 重启 Pi Agent session
-
-设置应用后，退出当前 Pi session，然后重新启动：
-
-```bash
-pi
-```
-
-这样 RPIV 配置才会完整生效。
-
----
-
-## 8. 完成标准
+## 7. 完成标准
 
 员工完成后，应能给负责人一个 GitHub 仓库链接，并且仓库里至少包含：
 
@@ -339,9 +288,3 @@ prd.md
 - 哪些功能暂时不做；
 - 怎么判断做完了。
 
-第二节课还要完成：
-
-- 已安装 `@juicesharp/rpiv-pi`；
-- 已运行 `/rpiv-setup`；
-- 已确认并应用设置；
-- 已重启 Pi Agent session。

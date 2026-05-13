@@ -15,7 +15,35 @@
 7. 用自然语言让 Pi 把文档 commit 并 push 到 GitHub。
 8. 第二节课安装 `@juicesharp/rpiv-pi`，运行 `/rpiv-setup`，并重启 Pi Agent session。
 
-## 推荐阅读
+## 课程正文
 
-- [员工操作教程](docs/employee-pi-first-prd.md)
-- [自我训练指南](docs/self-training-guide.md)
+### 第一课：安装 Pi、设置模型、写第一个 PRD
+
+学习内容：
+
+- 安装并启动 Pi；
+- 第一次 `/login`；
+- 面向中国大陆员工选择 DeepSeek；
+- 用 `/model` 选择 `deepseek/deepseek-v4-flash`；
+- 安装 Matt Pocock skills；
+- 用 `/grill-me` 澄清需求；
+- 用 `/to-prd` 生成 `prd.md`；
+- 让 Pi 自己 commit 并 push 到 GitHub。
+
+课程文档：
+
+- [第一课：安装 Pi、设置模型、写第一个 PRD](docs/lesson-01-first-prd.md)
+
+### 第二课：安装 RPIV 并完成 `/rpiv-setup`
+
+学习内容：
+
+- 安装 `@juicesharp/rpiv-pi`；
+- 运行 `/rpiv-setup`；
+- 查看 missing siblings 和 legacy entries 预览；
+- 确认并应用设置；
+- 重启 Pi Agent session。
+
+课程文档：
+
+- [第二课：安装 RPIV 并完成设置](docs/lesson-02-rpiv-setup.md)
