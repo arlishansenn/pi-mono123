@@ -1,6 +1,6 @@
 # Pi 员工入门培训
 
-这份文档用于培训员工第一次使用 [Pi](https://pi.dev/)：安装 Pi、安装工具包、安装产品/PM 常用 Skills，并完成第一个 `prd.md` 文件，最后让 Pi 自己提交并推送到 GitHub。
+这份文档用于员工自我训练 [Pi](https://pi.dev/)：安装 Pi、安装工具包、安装产品/PM 常用 Skills，完成第一个 `prd.md` 文件，并在第二节课安装 RPIV 工作流。
 
 ## 培训目标
 
@@ -13,6 +13,7 @@
 3. 安装并使用 Matt Pocock 的常用 Skills。
 4. 用自然语言让 Pi 生成第一个产品 PRD。
 5. 用自然语言让 Pi 把文档 commit 并 push 到 GitHub。
+6. 第二节课安装 `@juicesharp/rpiv-pi`，运行 `/rpiv-setup`，并重启 Pi Agent session。
 
 ## 推荐阅读
 

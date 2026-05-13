@@ -1,8 +1,8 @@
-# 自我训练指南：用 Pi 完成第一个 PRD
+# 自我训练指南：用 Pi 完成第一个 PRD，并安装 RPIV
 
 > 这是员工自己照着做的练习手册。
 >
-> 目标：自己安装 Pi，安装常用 skills，用 Pi 生成 `prd.md`，再让 Pi 自己提交并 push 到 GitHub。
+> 目标：自己安装 Pi，安装常用 skills，用 Pi 生成 `prd.md`，让 Pi 自己提交并 push 到 GitHub，然后完成第二节课的 RPIV 安装。
 
 ---
 
@@ -15,7 +15,8 @@
 3. 自己安装 Matt Pocock skills；
 4. 自己用 `/grill-me` 澄清需求；
 5. 自己用 `/to-prd` 生成 `prd.md`；
-6. 自己用一句话让 Pi commit 并 push 到 GitHub。
+6. 自己用一句话让 Pi commit 并 push 到 GitHub；
+7. 自己安装 `@juicesharp/rpiv-pi`，运行 `/rpiv-setup`，并重启 Pi Agent session。
 
 ---
 
@@ -173,6 +174,73 @@ Pi 会自己完成需要的 git 操作。
 
 ---
 
+## 第二节课：安装 RPIV 工作流
+
+第二节课的目标是安装 RPIV，并完成一次基础设置。
+
+### 2.1 安装 RPIV Pi package
+
+在终端执行：
+
+```bash
+pi install npm:@juicesharp/rpiv-pi
+```
+
+安装完成后，可以查看 package 是否出现：
+
+```bash
+pi list
+```
+
+### 2.2 启动 Pi 并运行 `/rpiv-setup`
+
+进入你的项目目录，启动 Pi：
+
+```bash
+pi
+```
+
+然后在 Pi 里输入：
+
+```text
+/rpiv-setup
+```
+
+`/rpiv-setup` 会读取：
+
+```text
+~/.pi/agent/settings.json
+```
+
+它会预览两类内容：
+
+1. 缺失的 sibling 配置；
+2. 建议清理的 legacy entries。
+
+你只需要检查预览内容是否合理。确认无误后，按提示确认一次，Pi 会自动应用设置。
+
+### 2.3 重启 Pi Agent session
+
+`/rpiv-setup` 完成后，退出当前 Pi session，然后重新进入：
+
+```bash
+pi
+```
+
+重启后，新的 RPIV 配置才会完整生效。
+
+### 2.4 第二节课完成标准
+
+完成后，你应该能确认：
+
+- `@juicesharp/rpiv-pi` 已安装；
+- `/rpiv-setup` 已运行；
+- 你看过配置预览；
+- 你确认并应用过设置；
+- 你已经重启 Pi Agent session。
+
+---
+
 ## 自我检查清单
 
 完成后检查：
@@ -184,7 +252,11 @@ Pi 会自己完成需要的 git 操作。
 - [ ] 我用 `/grill-me` 让 Pi 追问过需求；
 - [ ] 我生成了 `prd.md`；
 - [ ] 我让 Pi 自己 commit 并 push 到 GitHub；
-- [ ] GitHub 仓库里能看到 `prd.md`。
+- [ ] GitHub 仓库里能看到 `prd.md`；
+- [ ] 我安装了 `@juicesharp/rpiv-pi`；
+- [ ] 我运行了 `/rpiv-setup`；
+- [ ] 我确认并应用了设置；
+- [ ] 我重启了 Pi Agent session。
 
 ---
 
