@@ -66,7 +66,7 @@ pi --model deepseek/deepseek-v4-pro
 /model
 ```
 
-然后搜索 `deepseek-v4-flash`。注意选择 provider 是 `deepseek` 的模型；如果只看到 `openrouter` 下面的 `deepseek/...`，那是 OpenRouter 路由，不是 DeepSeek 官方 API Key 路由。
+然后搜索并选择 `deepseek-v4-flash`。
 
 > 如果员工没有 DeepSeek API Key，先向负责人申请，不要使用个人 key 处理公司资料。
 
