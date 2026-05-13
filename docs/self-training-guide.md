@@ -11,16 +11,18 @@
 完成后，你应该能做到：
 
 1. 自己打开 Pi；
-2. 自己安装 Pi package；
-3. 自己安装 Matt Pocock skills；
-4. 自己用 `/grill-me` 澄清需求；
-5. 自己用 `/to-prd` 生成 `prd.md`；
-6. 自己用一句话让 Pi commit 并 push 到 GitHub；
-7. 自己安装 `@juicesharp/rpiv-pi`，运行 `/rpiv-setup`，并重启 Pi Agent session。
+2. 自己完成 `/login`；
+3. 自己用 `/model` 选择 DeepSeek 模型；
+4. 自己安装 Pi package；
+5. 自己安装 Matt Pocock skills；
+6. 自己用 `/grill-me` 澄清需求；
+7. 自己用 `/to-prd` 生成 `prd.md`；
+8. 自己用一句话让 Pi commit 并 push 到 GitHub；
+9. 自己安装 `@juicesharp/rpiv-pi`，运行 `/rpiv-setup`，并重启 Pi Agent session。
 
 ---
 
-## 第 1 步：确认 Pi 可用
+## 第 1 步：确认 Pi 可用，并完成第一次登录
 
 在终端输入：
 
@@ -36,7 +38,41 @@ pi
 /login
 ```
 
-按提示完成登录。
+### 中国大陆员工推荐设置
+
+第一次登录时，推荐选择 **DeepSeek**。
+
+原因：DeepSeek 是国内员工更常见、访问和付款路径通常更方便的模型服务，Pi 也支持 DeepSeek API Key。
+
+操作步骤：
+
+1. 在 `/login` 里选择 `DeepSeek`；
+2. 粘贴公司提供的 DeepSeek API Key；
+3. 登录成功后，在 Pi 里输入：
+
+```text
+/model
+```
+
+4. 搜索并选择：
+
+```text
+deepseek/deepseek-v4-flash
+```
+
+日常写 PRD、自我训练、普通任务，默认用：
+
+```text
+DeepSeek V4 Flash
+```
+
+如果任务明显更复杂，需要更强推理能力，再切换到：
+
+```text
+deepseek/deepseek-v4-pro
+```
+
+> 注意：不要用个人 key 处理公司资料。如果没有 key，先找负责人申请。
 
 ---
 
@@ -246,6 +282,9 @@ pi
 完成后检查：
 
 - [ ] 我能打开 Pi；
+- [ ] 我完成了 `/login`；
+- [ ] 我会用 `/model` 切换模型；
+- [ ] 我知道默认推荐使用 `deepseek/deepseek-v4-flash`；
 - [ ] 我知道 `pi install npm:...` 和 `pi install git:...` 的区别；
 - [ ] 我安装了 Matt Pocock skills；
 - [ ] 我运行过 `/setup-matt-pocock-skills`；

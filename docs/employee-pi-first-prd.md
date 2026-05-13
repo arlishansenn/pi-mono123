@@ -32,7 +32,39 @@ pi
 /login
 ```
 
-然后按提示选择模型服务商，例如 Claude、OpenAI、GitHub Copilot 等。
+### 第一次登录推荐设置
+
+面向中国大陆员工，优先推荐使用 **DeepSeek**，原因是访问和付款路径通常更适合大陆环境，且 Pi 官方支持 DeepSeek API key。
+
+第一次 `/login` 时建议这样选：
+
+1. Provider 选择：`DeepSeek`；
+2. 按提示粘贴公司提供的 DeepSeek API Key；
+3. 登录成功后，在 Pi 里输入：
+
+```text
+/model
+```
+
+4. 搜索并选择：
+
+```text
+deepseek/deepseek-v4-flash
+```
+
+推荐默认模型：
+
+```text
+DeepSeek V4 Flash
+```
+
+如果需要更强推理能力，再切换到：
+
+```text
+deepseek/deepseek-v4-pro
+```
+
+> 如果员工没有 DeepSeek API Key，先向负责人申请，不要使用个人 key 处理公司资料。
 
 ---
 
