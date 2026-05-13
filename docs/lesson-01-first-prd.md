@@ -34,35 +34,39 @@ pi
 
 ### 第一次登录推荐设置
 
-面向中国大陆员工，优先推荐使用 **DeepSeek**，原因是访问和付款路径通常更适合大陆环境，且 Pi 官方支持 DeepSeek API key。
+面向中国大陆员工，优先推荐使用 **DeepSeek**，原因是访问和付款路径通常更适合大陆环境，且 Pi 支持 `DEEPSEEK_API_KEY`。
 
 第一次 `/login` 时建议这样选：
 
 1. Provider 选择：`DeepSeek`；
 2. 按提示粘贴公司提供的 DeepSeek API Key；
-3. 登录成功后，在 Pi 里输入：
+3. 登录成功后，先正常进入 Pi。
 
-```text
-/model
+然后设置模型。最稳妥的方式是在启动 Pi 时指定模型：
+
+```bash
+pi --model deepseek/deepseek-v4-flash
 ```
 
-4. 搜索并选择：
+日常写 PRD、自我训练、普通任务，默认用：
 
 ```text
 deepseek/deepseek-v4-flash
 ```
 
-推荐默认模型：
+如果任务明显更复杂，需要更强推理能力，再切换到：
 
-```text
-DeepSeek V4 Flash
+```bash
+pi --model deepseek/deepseek-v4-pro
 ```
 
-如果需要更强推理能力，再切换到：
+如果已经在 Pi 里面，也可以输入：
 
 ```text
-deepseek/deepseek-v4-pro
+/model
 ```
+
+然后搜索 `deepseek-v4-flash`。注意选择 provider 是 `deepseek` 的模型；如果只看到 `openrouter` 下面的 `deepseek/...`，那是 OpenRouter 路由，不是 DeepSeek 官方 API Key 路由。
 
 > 如果员工没有 DeepSeek API Key，先向负责人申请，不要使用个人 key 处理公司资料。
 
