@@ -36,10 +36,36 @@ pi
 
 面向中国大陆员工，优先推荐使用 **DeepSeek**，原因是访问和付款路径通常更适合大陆环境，且 Pi 支持 `DEEPSEEK_API_KEY`。
 
-第一次 `/login` 时建议这样选：
+### 自己获取 DeepSeek API Key
+
+员工需要自己去 DeepSeek 官方平台获取 API Key。流程如下：
+
+1. 打开 DeepSeek Platform：<https://platform.deepseek.com/>
+2. 注册或登录账号。
+3. 进入充值/余额页面，按自己的学习用量充值。DeepSeek API 是按 token 用量从余额里扣费，不是买固定次数的 key。
+4. 进入 API Keys 页面：<https://platform.deepseek.com/api_keys>
+5. 点击创建 API Key。
+6. 创建后立刻复制并保存好。API Key 通常只完整显示一次，丢失后不要找回，直接删除旧 key、重新创建新 key。
+
+DeepSeek 官方文档说明：
+
+- API base URL 是 `https://api.deepseek.com`；
+- API key 在 DeepSeek Platform 的 API Keys 页面申请；
+- 推荐模型包括 `deepseek-v4-flash` 和 `deepseek-v4-pro`；
+- 费用按输入、输出 token 用量从充值余额或赠送余额中扣除。
+
+### 在 Pi 里登录 DeepSeek
+
+拿到 API Key 后，在 Pi 里输入：
+
+```text
+/login
+```
+
+然后：
 
 1. Provider 选择：`DeepSeek`；
-2. 按提示粘贴公司提供的 DeepSeek API Key；
+2. 粘贴你刚才在 DeepSeek Platform 创建的 API Key；
 3. 登录成功后，先正常进入 Pi。
 
 然后设置模型。最稳妥的方式是在启动 Pi 时指定模型：
@@ -68,7 +94,7 @@ pi --model deepseek/deepseek-v4-pro
 
 然后搜索并选择 `deepseek-v4-flash`。
 
-> 如果员工没有 DeepSeek API Key，先向负责人申请，不要使用个人 key 处理公司资料。
+> 注意：API Key 是敏感信息，不要截图发群里，不要提交到 GitHub，不要写进 `prd.md` 或任何项目文件。
 
 ---
 
